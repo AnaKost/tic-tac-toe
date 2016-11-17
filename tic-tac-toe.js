@@ -45,4 +45,46 @@ function topLeft(){
   function midLeft(){
     if (midLeftClicked == "no"){
       var canvas = document.getElementById("game-board")
+      var circle = document.createElementNS(namespace,"circle")
+      circle.setAttribute("cx",45)
+      circle.setAttribute("cy",145)
+      circle.setAttribute("r",30)
+      circle.setAttribute("fill","purple")
+      canvas.appendChild(circle)}
+      midLeftClicked = "yes"
+  }
+  var midMidClicked = "no"
+  function midMid(){
+    if (midMidClicked == "no"){
+      var canvas = document.getElementById("game-board")
+      var rect = document.createElementNS(namespace,"rect")
+      rect.setAttribute("x",120)
+      rect.setAttribute("y",120)
+      rect.setAttribute("width",50)
+      rect.setAttribute("height",50)
+      rect.setAttribute("fill","purple")
+      canvas.appendChild(rect)}
+      midMidClicked = "yes"
+  }
+  var midRightClicked = "no"
+  function midRight(){
+    if (midRightClicked == "no"){
+      var canvas = document.getElementById("game-board")
+      var rect = document.createElementNS(namespace,"rect")
+      rect.setAttribute("x",220)
+      rect.setAttribute("y",120)
+      rect.setAttribute("width",50)
+      rect.setAttribute("height",50)
+      rect.setAttribute("fill","purple")
+      canvas.appendChild(rect)}
+      midRightClicked = "yes"
+  }
+  var BottomLeftClicked = "no"
+  function bottomLeft(){
+    if (BottomLeftClicked == "no"){
+      var canvas = document.getElementById("game-board")
+      var rect = document.createElementNS(namespace,"rect")
+      rect.setAttribute("x",290)
+      rect.setAttribute("y",)
+    }
   }
