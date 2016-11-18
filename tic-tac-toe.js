@@ -4,6 +4,8 @@ var namespace = "http://www.w3.org/2000/svg"
 var topLeftClicked = "no"
 function topLeft(){
   if (topLeftClicked == "no"){
+    if(turn == "player1")
+    var turn = "player1"
   var canvas = document.getElementById("game-board")
   var circle = document.createElementNS(namespace,"circle")
   circle.setAttribute("cx",45)
@@ -11,7 +13,16 @@ function topLeft(){
   circle.setAttribute("r",30)
   circle.setAttribute("fill","purple")
   canvas.appendChild(circle)
-  }
+  turn = "player2"
+}else{
+  var canvas = document.getElementById("game-board")
+  var circle = document.createElementNS(namespace,"rect")
+  rect.setAttribute("cx",45)
+  rect.setAttribute("cy",45)
+  rect.setAttribute("fill","purple")
+  canvas.appendChild(rect)
+  turn = "player1"
+}
     topLeftClicked = "yes"
 }
 
@@ -84,7 +95,24 @@ function topLeft(){
     if (BottomLeftClicked == "no"){
       var canvas = document.getElementById("game-board")
       var rect = document.createElementNS(namespace,"rect")
-      rect.setAttribute("x",290)
-      rect.setAttribute("y",)
+      rect.setAttribute("x",20)
+      rect.setAttribute("y",220)
+      rect.setAttribute("width",50)
+      rect.setAttribute("height",50)
+      rect.setAttribute("fill","purple")
+      canvas.appendChild(rect)}
+      BottomLeftClicked = "yes"
     }
+
+    var bottomMidClicked = "no"
+    function bottomMid(){
+      if (bottomMidClicked == "no"){
+      var canvas = document.getElementById("game-board")
+      var circle = document.createElementNS(namespace,"circle")
+      circle.setAttribute("cx",145)
+      circle.setAttribute("cy",245)
+      circle.setAttribute("r",30)
+      circle.setAttribute("fill","purple")
+      canvas.appendChild(circle)}
+      bottomMidClicked = "yes"
   }
