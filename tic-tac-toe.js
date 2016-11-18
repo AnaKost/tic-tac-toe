@@ -116,3 +116,4 @@ function topLeft(){
       canvas.appendChild(circle)}
       bottomMidClicked = "yes"
   }
+  
