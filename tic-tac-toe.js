@@ -17,8 +17,10 @@ function topLeft(){
 }else{
   var canvas = document.getElementById("game-board")
   var circle = document.createElementNS(namespace,"rect")
-  rect.setAttribute("cx",45)
-  rect.setAttribute("cy",45)
+  rect.setAttribute("x",45)
+  rect.setAttribute("y",45)
+  rect.setAttribute("width",50)
+  rect.setAttribute("height",50)
   rect.setAttribute("fill","purple")
   canvas.appendChild(rect)
   turn = "player1"
