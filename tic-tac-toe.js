@@ -116,4 +116,15 @@ function topLeft(){
       canvas.appendChild(circle)}
       bottomMidClicked = "yes"
   }
-  
+  var bottomRightClicked ="no"
+  function bottomRight(){
+    if (bottomRightClicked == "no"){
+      var canvas = document.getElementById("game-board")
+      var circle = document.createElementNS(namespace,"circle")
+      circle.setAttribute("cx",245)
+      circle.setAttribute("cy",245)
+      circle.setAttribute("r",30)
+      circle.setAttribute("fill","purple")
+      canvas.appendChild(circle)}
+      bottomRightClicked = "yes"
+    }
