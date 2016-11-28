@@ -29,9 +29,8 @@ function topLeft(){
     topLeftClicked = "yes"
 }
 }
-
+var turn = "player1"
   var topMiddleClicked = "no"
-  var turn = "player1"
   function topMiddle(){
     if (topMiddleClicked == "no" ){
       if (turn == "player1"){
