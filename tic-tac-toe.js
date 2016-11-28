@@ -2,10 +2,11 @@
 // You can use the namespace variable that's defined here.
 var namespace = "http://www.w3.org/2000/svg"
 var topLeftClicked = "no"
+var turn = "player1"
+
 function topLeft(){
   if (topLeftClicked == "no"){
-    if(turn == "player1")
-    var turn = "player1"
+    if(turn == "player1") {
   var canvas = document.getElementById("game-board")
   var circle = document.createElementNS(namespace,"circle")
   circle.setAttribute("cx",45)
@@ -16,9 +17,9 @@ function topLeft(){
   turn = "player2"
 }else{
   var canvas = document.getElementById("game-board")
-  var circle = document.createElementNS(namespace,"rect")
-  rect.setAttribute("x",45)
-  rect.setAttribute("y",45)
+  var rect = document.createElementNS(namespace,"rect")
+  rect.setAttribute("x",20)
+  rect.setAttribute("y",20)
   rect.setAttribute("width",50)
   rect.setAttribute("height",50)
   rect.setAttribute("fill","purple")
@@ -27,19 +28,35 @@ function topLeft(){
 }
     topLeftClicked = "yes"
 }
+}
 
   var topMiddleClicked = "no"
+  var turn = "player1"
   function topMiddle(){
     if (topMiddleClicked == "no" ){
+      if (turn == "player1"){
+        var canvas = document.getElementById("game-board")
+        var rect = document.createElementNS(namespace,"rect")
+        rect.setAttribute("x",145)
+        rect.setAttribute("y",45)
+        rect.setAttribute("width",50)
+        rect.setAttribute("height",50)
+        rect.setAttribute("fill","purple")
+        turn = "player2"
+      }else{
     var canvas = document.getElementById("game-board")
     var circle = document.createElementNS(namespace,"circle")
     circle.setAttribute("cx",145)
     circle.setAttribute("cy",45)
     circle.setAttribute("r",30)
     circle.setAttribute("fill","purple")
-    canvas.appendChild(circle)}
+    canvas.appendChild(circle)
+turn = "player1"
+}
     topMiddleClicked = "yes"
   }
+}
+
   var topRightClicked = "no"
   function topRight(){
     if (topRightClicked == "no"){
