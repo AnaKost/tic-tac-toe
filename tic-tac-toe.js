@@ -29,7 +29,7 @@ function topLeft(){
     topLeftClicked = "yes"
 }
 }
-var turn = "player1"
+
   var topMiddleClicked = "no"
   function topMiddle(){
     if (topMiddleClicked == "no" ){
@@ -45,11 +45,12 @@ var turn = "player1"
       }else{
         var canvas = document.getElementById("game-board")
         var rect = document.createElementNS(namespace,"rect")
-        rect.setAttribute("x",145)
-        rect.setAttribute("y",45)
+        rect.setAttribute("x",120)
+        rect.setAttribute("y",20)
         rect.setAttribute("width",50)
         rect.setAttribute("height",50)
         rect.setAttribute("fill","purple")
+        canvas.appendChild(rect)
         turn = "player1"
 }
     topMiddleClicked = "yes"
@@ -59,6 +60,16 @@ var turn = "player1"
   var topRightClicked = "no"
   function topRight(){
     if (topRightClicked == "no"){
+    if (turn == "player1"){
+      var canvas = document.getElementById("game-board")
+      var circle = document.createElementNS(namespace,"circle")
+      circle.setAttribute("cx",245)
+      circle.setAttribute("cy",45)
+      circle.setAttribute("r",30)
+      circle.setAttribute("fill","purple")
+      canvas.appendChild(circle)
+      turn = "player2"
+    }else{
       var canvas = document.getElementById("game-board")
       var rect = document.createElementNS(namespace,"rect")
       rect.setAttribute("x",220)
@@ -67,19 +78,27 @@ var turn = "player1"
       rect.setAttribute("height",50)
       rect.setAttribute("fill","purple")
       canvas.appendChild(rect)
+      turn = "player1"
     }
       topRightClicked = "yes"
   }
+}
   var midLeftClicked = "no"
   function midLeft(){
     if (midLeftClicked == "no"){
+      if (turn == "player1")
       var canvas = document.getElementById("game-board")
       var circle = document.createElementNS(namespace,"circle")
       circle.setAttribute("cx",45)
       circle.setAttribute("cy",145)
       circle.setAttribute("r",30)
       circle.setAttribute("fill","purple")
-      canvas.appendChild(circle)}
+      canvas.appendChild(circle)
+      turn = "player2"
+    }else{
+      var canvas = document.getElementById("game-board")
+      var rect = document.createElementNS(namespace,"rect")
+    }
       midLeftClicked = "yes"
   }
   var midMidClicked = "no"
