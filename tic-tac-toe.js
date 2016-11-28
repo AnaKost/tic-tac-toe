@@ -36,22 +36,22 @@ function topLeft(){
     if (topMiddleClicked == "no" ){
       if (turn == "player1"){
         var canvas = document.getElementById("game-board")
+        var circle = document.createElementNS(namespace,"circle")
+        circle.setAttribute("cx",145)
+        circle.setAttribute("cy",45)
+        circle.setAttribute("r",30)
+        circle.setAttribute("fill","purple")
+        canvas.appendChild(circle)
+      turn = "player2"
+      }else{
+        var canvas = document.getElementById("game-board")
         var rect = document.createElementNS(namespace,"rect")
         rect.setAttribute("x",145)
         rect.setAttribute("y",45)
         rect.setAttribute("width",50)
         rect.setAttribute("height",50)
         rect.setAttribute("fill","purple")
-        turn = "player2"
-      }else{
-    var canvas = document.getElementById("game-board")
-    var circle = document.createElementNS(namespace,"circle")
-    circle.setAttribute("cx",145)
-    circle.setAttribute("cy",45)
-    circle.setAttribute("r",30)
-    circle.setAttribute("fill","purple")
-    canvas.appendChild(circle)
-turn = "player1"
+        turn = "player1"
 }
     topMiddleClicked = "yes"
   }
